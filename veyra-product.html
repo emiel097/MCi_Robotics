@@ -40,6 +40,9 @@
   .eyebrow.on-navy{color:var(--accent);}
   .page-hero h1{font-size:clamp(30px,4vw,46px); max-width:16ch;}
   .page-hero p{margin-top:20px; font-size:16.5px; color:var(--text-dim); max-width:56ch;}
+  .hero-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:40px; align-items:center;}
+  .hero-exploded{display:flex; justify-content:center; align-items:center;}
+  .hero-exploded img{width:100%; max-width:380px; height:auto; display:block;}
 
   .btn{display:inline-block; padding:13px 24px; font-size:14.5px; font-weight:500; border-radius:2px;}
   .btn-primary{background:var(--accent); color:#FFFFFF;}
@@ -92,6 +95,9 @@
   @media (max-width:860px){
     .section-head, .why .wrap, .full-spec{grid-template-columns:1fr;}
     .apps{grid-template-columns:1fr;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-exploded{order:-1;}
+    .hero-exploded img{max-width:260px;}
     nav{position:relative;}
     .nav-toggle{display:inline-flex;}
     .nav-links{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:var(--navy); border-top:1px solid var(--line-navy); padding:6px 32px 18px; gap:0; z-index:60;}
@@ -124,11 +130,16 @@
 </header>
 
 <section class="page-hero">
-  <div class="wrap">
-    <div class="eyebrow">PRODUCT</div>
-    <h1>One drive system, plug-and-play for nearly any application.</h1>
-    <p>Veyra is a compact, lightweight drive system — motor plus reduction — designed for robotics and mobile systems. With CAN bus communication and a bayonet mount, it connects fast, and swaps out just as fast.</p>
-    <div class="hero-cta"><a href="veyra-contact.html" class="btn btn-primary">Request Specifications</a></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">PRODUCT</div>
+      <h1>One drive system, plug-and-play for nearly any application.</h1>
+      <p>Veyra is a compact, lightweight drive system — motor plus reduction — designed for robotics and mobile systems. With CAN bus communication and a bayonet mount, it connects fast, and swaps out just as fast.</p>
+      <div class="hero-cta"><a href="veyra-contact.html" class="btn btn-primary">Request Specifications</a></div>
+    </div>
+    <div class="hero-exploded">
+      <img src="images/veyra-exploded-view.png" alt="Exploded view of the Veyra actuator showing the internal gear train, motor, bearings, and housing">
+    </div>
   </div>
 </section>
 
